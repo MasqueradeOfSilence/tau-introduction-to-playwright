@@ -8,9 +8,18 @@ Welcome to the course "Introduction to Playwright" by [Renata Andrade](https://t
 
 1. Change the number of workers on [playwright.config.ts](/playwright.config.ts) and see how it affects the tests run time. Use the command `npm run test:e2e:all` to run all the existing tests. Note that the number of workers will change too on the terminal. Suggestions: 1, 10, 100. What happens when you change it to 100?
 
+**Answer:** Changing the number of workers is noted in the terminal output. A major speed difference isn't really seen since Playwright parallelizes at the file level, not the test level. 
+
 1. Change the reporter to 2 different options of your preference (mouse hover "reporter" to see the valid options). Besides the HTML, which ones could be useful for a project and why?
 
+**Answer:** Tried JSON and List for my 2. Many of these can be useful for a project depending on how you want your output formatted.
+
 1. Change the value of trace for each option available and identify the differences between them. Note how the size of the folder changes for each option.
+
+**Answer:** 
+- Trace Off = 3.1M    test-results/
+- Trace On = 58M    test-results/ and my fan got angry
+- 
 
 1. Enable the video and check how it looks. Is it more useful than the trace in your opinion?
 
