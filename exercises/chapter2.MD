@@ -17,22 +17,38 @@ Welcome to the course "Introduction to Playwright" by [Renata Andrade](https://t
 1. Change the value of trace for each option available and identify the differences between them. Note how the size of the folder changes for each option.
 
 **Answer:** 
-- Trace Off = 3.1M    test-results/
-- Trace On = 58M    test-results/ and my fan got angry
-- 
+- Check `du -sh test-results/`
+- Trace Off = 3.1M 
+- Trace On = 58M and my fan got angry
+- Trace on-first-retry = 13M
+- Trace on-all-retries = 17M
+- Trace retain-on-failure = 18M
+- Trace retain-on-first-failure = 19M
 
 1. Enable the video and check how it looks. Is it more useful than the trace in your opinion?
 
+**Answer:** I think both of them are useful. Some of the videos are very short and will need to be watched at a slower speed to actually process it.
+
 1. Create a new project on [playwright.config.ts](/playwright.config.ts), define a few unique settings and create a new script on [package.json](/package.json). Execute the new script. What useful params would make the test run even easier for you? Suggestion: Play with the different browsers and devices.
+
+**Answer:** your mom. The `--project=yourmom` in particular was a useful param. 
 
 1. Create a new test file, describe a simple new test case and implement a new test. What other locators did you use besides `getByRole` and `getByText`. How about assertions, what other LocatorAssertions did you use besides `toBeVisible`, `toHaveURL` and `not.toBeVisible`?
 
+**Answer:** See other files
+
 1. Open the [demo-todo-app.spec.ts](/tests-examples/demo-todo-app.spec.ts) and add a .only to one of the describes, run the tests. Use the command `npm run test:e2e:all`. Did it work?
+
+**ANSWER:** With it, 3 failed 6 passed. Without it, 6 skipped and 79 passed. So yes, it did appear to work. 
 
 1. Still in the [demo-todo-app.spec.ts](/tests-examples/demo-todo-app.spec.ts) revert the .only and add a new tag to some of the tests/describes. Update the script `test:e2e:smoke` in [package.json](/package.json) to use the new tag. Did it work?
 
+**Answer:** yeah
+
 
 💡 Share on LinkedIn something interesting you've learned! Don't forget to tag me [Renata Andrade](https://www.linkedin.com/in/raptatinha/).
+
+**Answer:** no
 
 If you have questions, feel free to post them on [github](https://github.com/raptatinha/tau-introduction-to-playwright/issues).
 

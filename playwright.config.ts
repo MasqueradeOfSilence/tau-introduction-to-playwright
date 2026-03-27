@@ -48,12 +48,12 @@ export default defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on',
+    trace: 'retain-on-first-failure',
     screenshot: 'only-on-failure',
     // headless: false,
     // ignoreHTTPSErrors: true,
     // viewport: { width: 1280, height: 720 },
-    // video: 'on-first-retry',
+    video: 'on-first-retry',
   },
     // timeout: 30000, //https://playwright.dev/docs/test-timeouts
     // expect: {
@@ -109,6 +109,12 @@ export default defineConfig({
         baseURL: 'https://playwright.dev/',
          ...devices['Desktop Firefox']
       },
+    },
+    {
+      name: 'yourmom',
+      use: {
+        baseURL: "https://www.donkey.com/"
+      }
     },
 
     // Example only

@@ -88,7 +88,7 @@ test.describe('Mark all as completed', () => {
     await checkNumberOfCompletedTodosInLocalStorage(page, 3);
   });
 
-  test('should allow me to clear the complete state of all items', async ({ page }) => {
+  test('@yourmom - should allow me to clear the complete state of all items', async ({ page }) => {
     const toggleAll = page.getByLabel('Mark all as complete');
     // Check and then immediately uncheck.
     await toggleAll.check();
@@ -146,7 +146,7 @@ test.describe('Item', () => {
     await expect(secondTodo).toHaveClass('completed');
   });
 
-  test('should allow me to un-mark items as complete', async ({ page }) => {
+  test('@yourmom - should allow me to un-mark items as complete', async ({ page }) => {
     // create a new todo locator
     const newTodo = page.getByPlaceholder('What needs to be done?');
 
